@@ -1,0 +1,53 @@
+body {
+	font-family: "Trebuchet MS", "Helvetica", "Arial",  "Verdana", "sans-serif";
+    font-size: 70%;
+}
+
+.container {
+    width: 200px;
+    float: left;
+    margin-left: 100px;
+    padding: 5px;
+}
+
+.container:nth-of-type(1) {
+    margin-left: 0;
+}
+
+#footer {
+    padding-top: 20px;
+    clear: both;
+}
+
+h2 {
+    text-align: center;
+}
+
+.sortable {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background: #DDD;
+    min-height: 20px;
+    margin-bottom: 20px;
+}
+
+.sortable li {
+    margin: 0 3px 3px 3px;
+    padding: 0.4em;
+    padding-left: 1.5em;
+    height: 18px;
+    cursor: move;
+}
+
+li.loadIndicator {
+    text-align: center;
+}
+
+.ui-dialog input {
+    width: 98%;
+}
+
+.button {
+    margin: 5px;
+}
