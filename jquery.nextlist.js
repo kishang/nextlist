@@ -409,12 +409,14 @@
 
                     newNode = insertNode(ui.item.find('span.nextlist-item-text').text(), ui.item.index(), $list.data('nextlist.nextwebNode'), $list.data('nextlist.settings').nextwebSession);
 
+                    ui.item.addClass('nextlist-item-unsynced');
+
                     commitChanges($originalList);
 
                     commitChanges($list, function () {
 
                         // Store the new Nextweb Node object
-                        ui.item.data('nextlist.nextwebNode', newNode.get());
+                        ui.item.removeClass('nextlist-item-unsynced').data('nextlist.nextwebNode', newNode.get());
                     });
                 }
             });
