@@ -228,12 +228,12 @@
 
         if (!address) {
             throwError('Invalid Nextweb node address specified');
-            return;
+            return this;
         }
 
         if (!secret) {
             throwError('Invalid Nextweb node secret specified');
-            return;
+            return this;
         }
 
         // Get the settings object, modify it as needed and store it back
@@ -250,11 +250,14 @@
             disableMonitoring(this);
             enableMonitoring(this);
         }
+
+        return this;
     };
 
     /* Reloads items from Nextweb */
     methods.reload = function () {
         refreshItems(this);
+        return this;
     };
 
     /* Returns the Nextweb session object being used */
@@ -265,11 +268,13 @@
     /* Enables regular monitoring for changes */
     methods.startMonitor = function (interval) {
         enableMonitoring(this, interval);
+        return this;
     };
 
     /* Disables regular monitoring for changes */
     methods.stopMonitor = function () {
         disableMonitoring(this);
+        return this;
     };
 
     /* --- Plug-in Declaration --- */
@@ -282,14 +287,14 @@
 
         if (!$list.length) {
             throwError('Invalid selection. The first element must be either an <ul> or an <ol> element and must have jQuery UI Sortable initialized');
-            return;
+            return this;
         }
 
         if (methods[optionsOrMethod]) {
 
             if (!$list.data('nextlist.settings')) {
                 throwError('Cannot invoke method before Nextlist initialization');
-                return;
+                return this;
             }
 
             // Invoke the public plug-in method using all but the first argument
@@ -299,7 +304,7 @@
 
         if ($list.data('nextlist.settings')) {
             throwError('Nextlist has already been initialized for this element');
-            return;
+            return this;
         }
 
         // Merge options and defaults
