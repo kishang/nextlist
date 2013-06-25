@@ -4,7 +4,7 @@ Nexlist is a jQuery plug-in that makes it incredibly easy to make your jQuery UI
 
 ##Licensing
 
-Nextlist is licensed under the [MIT license](https://github.com/kishang/test-nextlist/blob/master/MIT-LICENSE.txt).
+Nextlist is licensed under the [MIT license](https://github.com/kishang/nextlist/blob/master/MIT-LICENSE.txt).
 
 ##Demos
 
