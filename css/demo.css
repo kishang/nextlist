@@ -51,3 +51,7 @@ li.loadIndicator {
 .button {
     margin: 5px;
 }
+
+.nextlist-item-unsynced {
+    opacity: .35;
+}
